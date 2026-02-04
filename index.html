@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="board">
+  <div class="column home">
+    <h2>Home</h2>
+
+    <button class="btn primary" onclick="openModal()">ADD</button>
+    <button class="btn secondary" onclick="viewTasks()">View</button>
+  </div>
+  <div class="column">
+    <h2>To Do</h2>
+    <div id="todoList"></div>
+  </div>
+  <div class="column">
+    <h2>In Progress</h2>
+    <div id="progressList"></div>
+  </div>
+  <div class="column">
+    <h2>Done</h2>
+    <div id="doneList"></div>
+  </div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <h3>Add Task</h3>
+
+    <input id="title" type="text" placeholder="Title">
+    <textarea id="description" placeholder="Description"></textarea>
+    <input id="time" type="number" placeholder="Time to finish (hours)">
+
+    <div class="modal-actions">
+      <button class="btn primary" onclick="saveTask()">Save</button>
+      <button class="btn secondary" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
